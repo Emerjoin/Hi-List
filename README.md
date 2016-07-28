@@ -223,13 +223,15 @@ hiList.extend(function(extension){
 
             extension.preFetch = function($scope, filter){
 
-                //Invoked when the fetch operation finishes successfully. 
+                //Invoked before the fetch operation begin. 
+                //Allows an extension to manipulate the filter 
 
             };
 
             extension.postFetch = function($scope, result){
 
                 //Invoked when the fetch operation finishes successfully. 
+                //Allows an extension to manipulate the result before it gets displayed
 
             };
 
