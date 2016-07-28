@@ -43,8 +43,9 @@ Get the jar file Here
 ```
 
 ### Examplaining the attributes
+All the attributes present on that list element are mandatory. There shouldn't be a list without any of that attributes.
 #### name
-This is a mandatory attribute. It defines the name of your list instance and you can use such name
+It defines the name of your list instance and you can use such name
 to access the list public API from your view. Checkout the following example:
 
 ```javascript
@@ -114,9 +115,32 @@ You can also define the delay detection time in milliseconds. All you have to do
 ```
 
 #### The server returned an empty array of rows
-Details here
+Hi-List will set the variable *$empty* to *true* once it receives an empty array of rows.
+You can also have a DOM element that is displayed is such situations. Check the following example:
+```html
+<list ...>
+
+   <!--Your repeatable element and other stuff come here-->
+
+   <div ng-show="$empty">
+      <p>There is no match on the database</p>
+   </div>
+   
+   <!--Other elements may be placed here-->
+   
+</list>
+```
+When the server returns an empty array of rows, the pagination is not displayed.
+
 #### Intercepting the fetch operation from a view
 Details here
+
+##### Before the fetch
+Details here
+
+##### After the fetch
+Details here
+
 #### Changing maximum items per page
 Details here
 
