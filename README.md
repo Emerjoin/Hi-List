@@ -88,7 +88,7 @@ public class SomeFrontier{
 ```
 
 ## Tweking the list
-#### Server is taking too long
+### Server is taking too long
 Hi-List will set the variable *$delaying* to *true* once it detects the server delay. 
 You can have a DOM element that is displayed when the delay is detected. Check the following example:
 ```html
@@ -114,7 +114,7 @@ You can also define the delay detection time in milliseconds. All you have to do
 </list>
 ```
 
-#### The server returned an empty array of rows
+### The server returned an empty array of rows
 Hi-List will set the variable *$empty* to *true* once it receives an empty array of rows.
 You can also have a DOM element that is displayed is such situations. Check the following example:
 ```html
@@ -132,16 +132,16 @@ You can also have a DOM element that is displayed is such situations. Check the 
 ```
 When the server returns an empty array of rows, the pagination is not displayed.
 
-#### Intercepting the fetch operation from a view
+### Intercepting the fetch operation from a view
 Details here
 
-##### Before the fetch
+#### Before the fetch
 Details here
 
-##### After the fetch
+#### After the fetch
 Details here
 
-#### Changing maximum items per page
+### Changing maximum items per page
 Details here
 
 ## Manipulating the List from its methods
