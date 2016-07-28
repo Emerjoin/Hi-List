@@ -96,16 +96,32 @@ Details here
 ### Changing maximum items per page
 Details here
 
-## Manipulating the List from a view
+## Manipulating the List from its methods
 
-### refresh();
-### goToPage(number);
-### goToLastPage();
-### gotToFirstPage();
-### getCurrentPage();
-### getTotalPages();
-### goToNextPage();
-### goToPreviousPage();
+### Refreshing the current page
+```javascript
+list.refresh();
+```
+### Going to specific page
+```javascript
+list.goToPage(number);
+```
+### Go to the last page
+```javascript
+list.goToLastPage();
+```
+### Go to the first page
+```javascript
+list.gotToFirstPage();
+```
+### Go to the next page
+```javascript
+list.goToNextPage();
+```
+### Go to the previous page
+```javascript
+list.goToPreviousPage();
+```
 
 # Extensions
 The Hi-List is extensible. This means you can extend its capabilities creating your own extensions.
