@@ -112,6 +112,115 @@ Example:
 
 ## Creating your own extension
 
+### Basic extension
+```javascript
+hiList.extend(function(extension){
+
+    return {
+
+        name:"extension1", //The extension name
+        singleton:false, //If true, there will only be one instance of this extension for all the lists
+        build: function(){
+
+            //Override the instance methods here
+            extension.$startup = function(){
+
+                //This method is invoked when creating the extension instance
+
+            };
+            
+             extension.apiSetup = function($scope, attrs){
+
+                //Your extension can add methods to the list instance scope from here
+
+            };
+
+            extension.transformRepeatable = function($scope,attrs,transformable){
+
+               //This method allows your extension to change the list repeatable element.
+               //Use transformable.repeatable to access the jQuery DOM element object.
+
+            };
+
+            extension.transformHtml = function($scope,attrs,transformable){
+
+                //This method allows your extension to change list generated HTML.
+                //Use transformable.html to access the jQuery DOM element object.
+
+            };
+
+            extension.preFetch = function($scope, filter){
+
+                //Invoked when the fetch operation finishes successfully. 
+
+            };
+
+            extension.postFetch = function($scope, result){
+
+                //Invoked when the fetch operation finishes successfully. 
+
+            };
+
+
+            extension.fetchFail = function($scope, filter, ordering){
+
+                //Invoked when the fetch operation fails. 
+
+            };
+
+            extension.fetchFinished = function($scope){
+
+                //Invoked when the fetch operation finishes. 
+                //Doesnt matter if it failed or not, this function is always invoked
+
+            };
+
+            extension.invalidResult = function($scope){
+
+                //This function is invoked when the list receives an invalid result from frontier method
+
+            };
+
+            return extension;
+
+        }
+
+    };
+
+});
+```
+
+### Injecting services into an extension
+```javascript
+hiList.extend(function(extension){
+
+    return {
+
+        name:"extension1", //The extension name
+        inject : ['$compile'],
+        singleton:false, //If true, there will only be one instance of this extension for all the lists
+        build: function($compile){
+        
+            //...
+            
+            extension.$startup = function(){
+
+               
+
+            };
+            
+            //...
+            
+            return extension;
+
+        }
+
+    };
+
+});
+```
+
+
 
 
 
