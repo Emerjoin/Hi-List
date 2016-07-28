@@ -86,9 +86,17 @@ public class SomeFrontier{
 }
 ```
 
-## Options
+## Tweking the list
+### Server is taking too long
+Details here
+### The server returned an empty array of rows
+Details here
+### Intercepting the fetch operation from a view
+Details here
+### Changing maximum items per page
+Details here
 
-## The public API
+## Manipulating the List from a view
 
 ### refresh();
 ### goToPage(number);
