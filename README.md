@@ -98,29 +98,29 @@ Details here
 
 ## Manipulating the List from its methods
 
-### Refreshing the current page
+#### Refreshing the current page
 ```javascript
-list.refresh();
+$scope.listName.refresh();
 ```
-### Going to specific page
+#### Going to specific page
 ```javascript
-list.goToPage(number);
+$scope.listName.goToPage(number);
 ```
-### Go to the last page
+#### Go to the last page
 ```javascript
-list.goToLastPage();
+$scope.listName.goToLastPage();
 ```
-### Go to the first page
+#### Go to the first page
 ```javascript
-list.gotToFirstPage();
+$scope.listName.gotToFirstPage();
 ```
-### Go to the next page
+#### Go to the next page
 ```javascript
-list.goToNextPage();
+$scope.listName.goToNextPage();
 ```
-### Go to the previous page
+#### Go to the previous page
 ```javascript
-list.goToPreviousPage();
+$scope.listName.goToPreviousPage();
 ```
 
 # Extensions
