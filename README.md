@@ -1,6 +1,11 @@
 # Hi-List
 An extensible Hi-Framework UI component for data listing - easy pagination, filtering and ordering
 
+## Why use Hi-List?
+* Extensible
+* Configurable
+* Uses bootstrap components
+* Add and use
 
 
 # Getting the Hi-List component
@@ -16,9 +21,9 @@ An extensible Hi-Framework UI component for data listing - easy pagination, filt
 ### The dependency
 ```xml
 <dependency>
-   <groupId>mz.hi.framework</groupId>
-   <artifactId>hi-web</artifactId>
-   <version>1.0-beta-SNAPSHOT</version>
+   <groupId>mz.talkcode.components</groupId>
+   <artifactId>HiList</artifactId>
+   <version>1.0-SNAPSHOT</version>
 </dependency>
 ```
 
@@ -28,7 +33,7 @@ Get the jar file Here
 # Using Hi-List
 ## A simple list
 ```javascript
-<list name="list1" each="row" src="SomeFrontier.methodWithParams()" 
+<list name="list1" each="row" src="SomeFrontier.methodName" 
         repeat-element=".myElement">
 
            <item class="myElement">
@@ -38,7 +43,42 @@ Get the jar file Here
 </list>
 ```
 
+### Examplaining the attributes
+#### The name attribute
+This is a mandatory attribute. It defines the name of your list instance and you can use such name
+to access the list public API from your view. Checkout the following example:
+
+```javascript
+//some code here
+  $scope.list1.publicMethod(params);
+//some code here
+```
+
+#### The each attribute
+Defines the variable name that is used within the repeatable element to access the row's attributes.
+
+#### The src attribute 
+Defines the frontier method that should be used as data source.
+
+#### The repeat-element attribute
+Defines the element that should be repeated for each row. Receives a jquery selector.
+
+### The Frontier
+
 ## Options
 
+## The public API
+
+### refresh();
+### goToPage(number);
+### goToLastPage();
+### gotToFirstPage();
+### getCurrentPage();
+### getTotalPages();
+### goToNextPage();
+### goToPreviousPage();
+
 # Extensions
+## Enabling an extension
+## Creating your own extension
 
