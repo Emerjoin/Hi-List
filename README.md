@@ -87,13 +87,37 @@ public class SomeFrontier{
 ```
 
 ## Tweking the list
-### Server is taking too long
+#### Server is taking too long
+Hi-List will set the variable *$delaying* to *true* once it detects the server delay. 
+You can have a DOM element that is displayed when the delay is detected. Check the following example:
+```html
+<list ...>
+
+   <!--Your repeatable element and other stuff come here-->
+
+   <div ng-show="$delaying">
+      <p>Please wait...</p>
+   </div>
+   
+   <!--Other elements may be placed here-->
+   
+</list>
+```
+
+You can also define the delay detection time in milliseconds. All you have to do is to set the attribute *delay* on your list element. Check the following example, the server delay will be detected after 1 second waiting for the server reply:
+```html
+<list ...delay="1000" ...>
+
+   <!--Your repeatable element and other stuff come here-->
+   
+</list>
+```
+
+#### The server returned an empty array of rows
 Details here
-### The server returned an empty array of rows
+#### Intercepting the fetch operation from a view
 Details here
-### Intercepting the fetch operation from a view
-Details here
-### Changing maximum items per page
+#### Changing maximum items per page
 Details here
 
 ## Manipulating the List from its methods
