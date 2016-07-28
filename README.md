@@ -44,7 +44,7 @@ Get the jar file Here
 ```
 
 ### Examplaining the attributes
-#### The name attribute
+#### name
 This is a mandatory attribute. It defines the name of your list instance and you can use such name
 to access the list public API from your view. Checkout the following example:
 
@@ -54,16 +54,37 @@ to access the list public API from your view. Checkout the following example:
 //some code here
 ```
 
-#### The each attribute
+#### each
 Defines the variable name that is used within the repeatable element to access the row's attributes.
 
-#### The src attribute 
+#### src 
 Defines the frontier method that should be used as data source.
 
-#### The repeat-element attribute
+#### repeat-element
 Defines the element that should be repeated for each row. Receives a jquery selector.
 
-### The Frontier
+### The Frontier method
+A valid frontier method to be used as a list data source should receive 4 arguments: the desired page, the maximum items per page, the filter details and the ordering settings. 
+
+```java
+
+@Frontier
+@ApplicationScoped
+public class SomeFrontier{
+
+    public Map methodName(int pageNumber, int itemsPerPage, Map filter, Map ordering){
+          
+          int totalMatchedPages;
+          Object[] rows;
+          int totalMachedRows;
+          
+          //Consult your database here and set the variables above
+          return HiList.listEncode(rows, totalMachedRows, pageNumber, totalMatchedPages)
+    
+    }
+
+}
+```
 
 ## Options
 
