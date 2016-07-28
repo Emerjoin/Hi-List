@@ -32,13 +32,12 @@ Get the jar file Here
 
 # Using Hi-List
 ## A simple list
-```javascript
-<list name="list1" each="row" src="SomeFrontier.methodName" 
-        repeat-element=".myElement">
+```html
+<list name="list1" each="row" src="SomeFrontier.methodName" repeat-element=".myElement">
 
-           <item class="myElement">
-                 {{row.attribute}}   
-           </item>
+     <item class="myElement">
+         {{row.attribute}}   
+     </item>
 
 </list>
 ```
@@ -79,6 +78,7 @@ public class SomeFrontier{
           int totalMachedRows;
           
           //Consult your database here and set the variables above
+          
           return HiList.listEncode(rows, totalMachedRows, pageNumber, totalMatchedPages)
     
     }
@@ -100,6 +100,18 @@ public class SomeFrontier{
 ### goToPreviousPage();
 
 # Extensions
+The Hi-List is extensible. This means you can extend its capabilities creating your own extensions.
 ## Enabling an extension
+Just add the attribute *extensions* and set as value a list of extensions separated by space.
+Example:
+```html
+<list ... extensions="extension1 extension2" ...>
+    <!--You list content-->
+</list>
+```
+
 ## Creating your own extension
+
+
+
 
