@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>mz.talkcode.components</groupId>
+    <artifactId>HiList</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>mz.hi.framework</groupId>
+            <artifactId>hi-web</artifactId>
+            <version>1.0-beta-SNAPSHOT</version>
+        </dependency>
+
+    </dependencies>
+
+    <repositories>
+        <repository>
+            <id>talk-code</id>
+            <name>maven-repo</name>
+            <url>https://github.com/talk-code/maven-repo/raw/master</url>
+        </repository>
+    </repositories>
+
+
+
+</project>

@@ -6,18 +6,12 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f36bef22-7bd7-413d-a6b0-a0cbca9bc49c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Resources/out/artifacts/jar/hi-resources-1.0.beta.jar" afterPath="$PROJECT_DIR$/../Resources/out/artifacts/jar/hi-resources-1.0.beta.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/extensions/bulk.js" afterPath="$PROJECT_DIR$/extensions/bulk.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Resources/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Resources/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Resources/src/main/java/META-INF/resources/hi-config.xsd" afterPath="$PROJECT_DIR$/../Resources/src/main/java/META-INF/resources/hi-config.xsd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Web/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Web/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Web/src/main/java/mz/co/hi/web/BootstrapUtils.java" afterPath="$PROJECT_DIR$/../Web/src/main/java/mz/co/hi/web/BootstrapUtils.java" />
-    </list>
+    <list default="true" id="f36bef22-7bd7-413d-a6b0-a0cbca9bc49c" name="Default" comment="" />
     <ignored path="ComponentDemo.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path=".idea/dataSources.local.xml" />
+    <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,17 +30,39 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="HiList.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mz/co/hi/web/component/HiList.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/mz/co/hi/web/component/HiList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-12.222222">
+              <caret line="26" column="34" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.24336283">
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MANIFEST.MF" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/META-INF/MANIFEST.MF">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="26" column="34" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="DatasourceExample.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mz/co/hi/web/component/DatasourceExample.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/mz/co/hi/web/component/DatasourceExample.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="11" column="85" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="85" />
@@ -67,24 +83,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hilist.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/META-INF/resources/hilist.js">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-198.88889">
-              <caret line="358" column="0" selection-start-line="358" selection-start-column="0" selection-end-line="358" selection-end-column="0" />
-              <folding>
-                <marker date="1469710561000" expanded="true" signature="4816:4832" placeholder="..." />
-              </folding>
+            <state vertical-scroll-proportion="-0.2195122">
+              <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bulk.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/extensions/bulk.js">
+      <file leaf-file-name="hilist.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/META-INF/resources/hilist.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.48051947">
-              <caret line="215" column="14" selection-start-line="215" selection-start-column="14" selection-end-line="215" selection-end-column="14" />
-              <folding />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="10" column="3" selection-start-line="0" selection-start-column="0" selection-end-line="1023" selection-end-column="45" />
+              <folding>
+                <marker date="1469710561000" expanded="true" signature="4816:4832" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -93,22 +109,8 @@
         <entry file="file://$PROJECT_DIR$/META-INF/resources/hilist.min.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="13" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="485" selection-end-column="49" />
-              <folding>
-                <marker date="1466746585000" expanded="true" signature="3577:3789" placeholder="..." />
-                <marker date="1466746585000" expanded="true" signature="3636:3787" placeholder="..." />
-                <marker date="1466746585000" expanded="true" signature="3664:3680" placeholder="..." />
-                <marker date="1466746585000" expanded="true" signature="3886:4366" placeholder="..." />
-                <marker date="1466746585000" expanded="true" signature="3886:4367" placeholder="..." />
-                <marker date="1466746585000" expanded="true" signature="3886:4383" placeholder="..." />
-                <marker date="1466746585000" expanded="true" signature="3886:4399" placeholder="..." />
-                <marker date="1466746585000" expanded="true" signature="3886:4400" placeholder="..." />
-                <marker date="1466746585000" expanded="true" signature="3886:4416" placeholder="..." />
-                <marker date="1466746585000" expanded="true" signature="3886:4417" placeholder="..." />
-                <marker date="1466746585000" expanded="true" signature="3921:4366" placeholder="..." />
-                <marker date="1466746585000" expanded="true" signature="4273:4366" placeholder="..." />
-                <marker date="1466746585000" expanded="true" signature="4315:4366" placeholder="..." />
-              </folding>
+              <caret line="0" column="9342" selection-start-line="0" selection-start-column="9342" selection-end-line="0" selection-end-column="9342" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -137,13 +139,15 @@
         <option value="$PROJECT_DIR$/META-INF/resources/component1.js" />
         <option value="$PROJECT_DIR$/META-INF/resources/component1.min.js" />
         <option value="$PROJECT_DIR$/src/mz/co/hi/web/component/Component1.java" />
-        <option value="$PROJECT_DIR$/META-INF/resources/hilist.min.js" />
         <option value="$PROJECT_DIR$/changes.txt" />
         <option value="$PROJECT_DIR$/src/mz/co/hi/web/component/HiListDatasourcesSample.java" />
         <option value="$PROJECT_DIR$/src/mz/co/hi/web/component/DatasourceExample.java" />
         <option value="$PROJECT_DIR$/src/mz/co/hi/web/component/HiList.java" />
         <option value="$PROJECT_DIR$/META-INF/resources/hilist.js" />
         <option value="$PROJECT_DIR$/extensions/bulk.js" />
+        <option value="$PROJECT_DIR$/META-INF/resources/hilist.min.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -151,6 +155,18 @@
   <component name="JsBuildToolPackageJson" detection-done="true" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Bundled (Maven 3)" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
@@ -182,7 +198,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
@@ -213,60 +228,26 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="component" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HiList" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HiList" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="META-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HiList" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HiList" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="META-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.4862069" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/CLOUD DIGITAL ARTS/Dumbo Presence V3/source/dumbo-stocks-frontiers" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="ignore_missing_gitignore" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -714,39 +695,43 @@
       <workItem from="1469438699929" duration="6250000" />
       <workItem from="1469451635788" duration="65633000" />
       <workItem from="1469706174502" duration="2650000" />
+      <workItem from="1469721796370" duration="408000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="122399000" />
+    <option name="totallyTimeSpent" value="122807000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="822" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24892704" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24892704" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -769,15 +754,17 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/mz/co/hi/web/component/HiList.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/mz/co/hi/web/component/HiList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="34" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
-          <folding />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mz/co/hi/web/component/DatasourceExample.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/mz/co/hi/web/component/DatasourceExample.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="85" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="85" />
@@ -798,18 +785,10 @@
     <entry file="file://$PROJECT_DIR$/META-INF/resources/hilist.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="358" column="0" selection-start-line="358" selection-start-column="0" selection-end-line="358" selection-end-column="0" />
           <folding>
             <marker date="1469710561000" expanded="true" signature="4816:4832" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/extensions/bulk.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="44" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -817,33 +796,21 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="13" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="485" selection-end-column="49" />
-          <folding>
-            <marker date="1466746585000" expanded="true" signature="3577:3789" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3636:3787" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3664:3680" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3886:4366" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3886:4367" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3886:4383" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3886:4399" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3886:4400" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3886:4416" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3886:4417" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3921:4366" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="4273:4366" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="4315:4366" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mz/co/hi/web/component/HiList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mz/co/hi/web/component/DatasourceExample.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/mz/co/hi/web/component/HiList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="34" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mz/co/hi/web/component/DatasourceExample.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="85" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="85" />
@@ -861,11 +828,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mz/co/hi/web/component/HiList.java">
+    <entry file="file://$PROJECT_DIR$/META-INF/resources/hilist.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1469710561000" expanded="true" signature="4816:4832" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/META-INF/resources/hilist.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="485" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mz/co/hi/web/component/HiList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mz/co/hi/web/component/DatasourceExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="85" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="85" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/changes.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mz/co/hi/web/component/HiList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -883,29 +898,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1466746585000" expanded="true" signature="3577:3789" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3636:3787" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3664:3680" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3886:4366" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3886:4367" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3886:4383" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3886:4399" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3886:4400" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3886:4416" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3886:4417" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3921:4366" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="4273:4366" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="4315:4366" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mz/co/hi/web/component/HiList.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/mz/co/hi/web/component/HiList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -923,29 +926,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1466746585000" expanded="true" signature="3577:3789" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3636:3787" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3664:3680" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3886:4366" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3886:4367" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3886:4383" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3886:4399" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3886:4400" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3886:4416" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3886:4417" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3921:4366" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="4273:4366" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="4315:4366" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mz/co/hi/web/component/HiList.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/mz/co/hi/web/component/HiList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -963,29 +954,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1466746585000" expanded="true" signature="3577:3789" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3636:3787" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3664:3680" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3886:4366" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3886:4367" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3886:4383" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3886:4399" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3886:4400" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3886:4416" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3886:4417" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3921:4366" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="4273:4366" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="4315:4366" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mz/co/hi/web/component/HiList.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/mz/co/hi/web/component/HiList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1003,29 +982,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1466746585000" expanded="true" signature="3577:3789" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3636:3787" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3664:3680" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3886:4366" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3886:4367" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3886:4383" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3886:4399" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3886:4400" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3886:4416" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3886:4417" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3921:4366" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="4273:4366" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="4315:4366" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mz/co/hi/web/component/HiList.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/mz/co/hi/web/component/HiList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1039,11 +1006,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mz/co/hi/web/component/HiList.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/mz/co/hi/web/component/HiList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1061,21 +1030,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1466746585000" expanded="true" signature="3577:3789" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3636:3787" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3664:3680" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3886:4366" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3886:4367" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3886:4383" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3886:4399" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3886:4400" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3886:4416" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3886:4417" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3921:4366" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="4273:4366" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="4315:4366" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1086,7 +1041,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mz/co/hi/web/component/DatasourceExample.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/mz/co/hi/web/component/DatasourceExample.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="85" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="85" />
@@ -1096,32 +1051,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/META-INF/resources/hilist.min.js">
+    <entry file="file://$PROJECT_DIR$/src/main/java/mz/co/hi/web/component/HiList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="485" selection-end-column="49" />
+        <state vertical-scroll-proportion="-12.222222">
+          <caret line="26" column="34" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
           <folding>
-            <marker date="1466746585000" expanded="true" signature="3577:3789" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3636:3787" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3664:3680" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3886:4366" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3886:4367" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3886:4383" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3886:4399" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3886:4400" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3886:4416" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3886:4417" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="3921:4366" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="4273:4366" placeholder="..." />
-            <marker date="1466746585000" expanded="true" signature="4315:4366" placeholder="..." />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mz/co/hi/web/component/HiList.java">
+    <entry file="file://$PROJECT_DIR$/META-INF/MANIFEST.MF">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="34" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/META-INF/resources/hilist.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="3" selection-start-line="0" selection-start-column="0" selection-end-line="1023" selection-end-column="45" />
+          <folding>
+            <marker date="1469710561000" expanded="true" signature="4816:4832" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/META-INF/resources/hilist.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="9342" selection-start-line="0" selection-start-column="9342" selection-end-line="0" selection-end-column="9342" />
           <folding />
         </state>
       </provider>
@@ -1134,20 +1095,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/META-INF/resources/hilist.js">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-198.88889">
-          <caret line="358" column="0" selection-start-line="358" selection-start-column="0" selection-end-line="358" selection-end-column="0" />
-          <folding>
-            <marker date="1469710561000" expanded="true" signature="4816:4832" placeholder="..." />
-          </folding>
+        <state vertical-scroll-proportion="-0.2195122">
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/extensions/bulk.js">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48051947">
-          <caret line="215" column="14" selection-start-line="215" selection-start-column="14" selection-end-line="215" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.24336283">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1211,7 +1170,6 @@
             <option name="proportions">
               <list>
                 <option value="0.4862069" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
