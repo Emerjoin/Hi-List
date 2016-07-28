@@ -3,22 +3,42 @@ An extensible Hi-Framework UI component for data listing - easy pagination, filt
 
 
 
-# Get Hi-List
+# Getting the Hi-List component
 ## Maven
+### The repository
+```xml
+<repository>
+   <id>talk-code</id>
+   <name>maven-repo</name>
+   <url>https://github.com/talk-code/maven-repo/raw/master</url>
+</repository>
+```
+### The dependency
+```xml
+<dependency>
+   <groupId>mz.hi.framework</groupId>
+   <artifactId>hi-web</artifactId>
+   <version>1.0-beta-SNAPSHOT</version>
+</dependency>
+```
+
 ## Jar
+Get the jar file Here
 
 # Using Hi-List
-## Adding the list
+## A simple list
 ```javascript
 <list name="list1" each="row" src="SomeFrontier.methodWithParams()" 
-        persist-state="true" preFetch="method1(filter)" delay="400"
-        repeat-element=".myElement" postFetch="method2(result)" 
-        per-page="24" extensions="extension1 extension2 extension3">
+        repeat-element=".myElement">
 
            <item class="myElement">
                  {{row.attribute}}   
            </item>
 
-
 </list>
 ```
+
+## Options
+
+# Extensions
+
