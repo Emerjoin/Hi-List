@@ -138,7 +138,7 @@ When the server returns an empty array of rows, the pagination is not displayed.
 Changing the input means: add filtering properties. Changing the outcome means: changing the rows composition or even adding rows.
 
 #### Changing the input
-There two ways this can be achieved. One is using an extension the second is using a function on your view scope.
+There two ways this can be achieved. The first one is using an extension and the second is using a function on your view scope.
 The first approach is discussed on the extensions section. Lets see how we can change the inputs of the fetch operation from a function of a view scope:
 
 ##### Define the function
@@ -155,18 +155,74 @@ The first approach is discussed on the extensions section. Lets see how we can c
 
 ...
 ```
-##### Tell the Hi-List component to invoke it 
+##### Letting the Hi-List component know about the function
 ```html
-<list ...preFetch="interceptor(filter)"...>
-   <!--Other elements and stuff-->
-</list>
+   <list ...preFetch="interceptor(filter)"...>
+      <!--Other elements and stuff-->
+   </list>
 ```
 
+*MAKE SURE THE PARAMETER YOU PASS TO YOUR FUNCTION IS ALWAYS "filter".*
+
 #### Changing the outcome
-Details here
+There are also two ways this can be achieved. The first one again is using an extension and the second one is using a function on your view's scope. Let's see how do achieve this from a view's scope function.
+
+##### Defining the function
+```javascript
+...
+
+   //This will add a new property to every matched row
+   $scope.transformer = function(result){
+      
+         result.data.forEach(function(row){
+            
+            row.checked = true;
+            
+         }
+   
+   }
+
+....
+
+```
+
+
+##### Leting the Hi-List component know about the function
+
+```html
+
+   <list ...postFetch="transformer(result)"...>
+      <!--Other elements and stuff-->
+   </list>
+
+```
+
+*MAKE SURE THE PARAMETER YOU PASS TO YOUR FUNCTION IS ALWAYS "result".*
+Check the extensions sections to see how to achieve the same goal from an extension.
 
 ### Changing maximum items per page
-Details here
+There two ways this can be done: from the markup and from javascript code.
+
+#### From markup
+```html
+
+   <!--Setting 78 as the maximum items per page value-->
+   <list ...per-page="78"...>
+      <!--Other elements and stuff-->
+   </list>
+
+```
+
+#### From Javascript
+```javascript
+   ...
+      
+      //Setting 78 as the maximum items per page value
+      $scope.myList.show.maxItems = 78;
+   
+   ...
+```
+
 
 ## Manipulating the List from its methods
 ```javascript
