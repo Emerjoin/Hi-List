@@ -89,6 +89,25 @@ public class SomeFrontier{
 ```
 
 ## Tweking the list
+
+### Adding a seach box 
+
+#### Inside the list
+```
+   <list ...>
+      <input type="text" ng-model="filter.text"/>
+   </list>
+```
+
+#### Outside the list
+```html
+   ...
+   <input type="text" ng-model="myList.filter.text"/>
+   ...
+```
+
+A change on the **filter.text** object will result in a refresh.
+
 ### Server is taking too long
 Hi-List will set the variable *$delaying* to *true* once it detects the server delay. 
 You can have a DOM element that is displayed when the delay is detected. Check the following example:
