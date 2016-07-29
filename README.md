@@ -93,16 +93,22 @@ public class SomeFrontier{
 ### Adding a seach box 
 
 #### Inside the list
-```
+```html
    <list ...>
+      ...
+      
       <input type="text" ng-model="filter.text"/>
+      
+      ...
    </list>
 ```
 
 #### Outside the list
 ```html
    ...
+   
    <input type="text" ng-model="myList.filter.text"/>
+   
    ...
 ```
 
