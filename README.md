@@ -133,41 +133,57 @@ You can also have a DOM element that is displayed is such situations. Check the 
 When the server returns an empty array of rows, the pagination is not displayed.
 
 ### Intercepting the fetch operation from a view
-Details here
+*What is the fetch operation?* Is when the Hi-List component attempts to fetch data from Server.
+*Why would you want to intercept such operation?* To change the input or the outcome. 
+Changing the input means: add filtering properties. Changing the outcome means: changing the rows composition or even adding rows.
 
-#### Before the fetch
-Details here
+#### Changing the input
+There two ways this can be achieved. One is using an extension the second is using a function on your view scope.
+The first approach is discussed on the extensions section. Lets see how we can change the inputs of the fetch operation from a function of a view scope:
 
-#### After the fetch
+##### Define the function
+```javascript
+
+...
+   
+   //This interceptor will add a date parameter to the filter
+   $scope.interceptor = function(filter){
+      
+         filter.date = "2016-07-28";
+   
+   };
+
+...
+##### Tell the Hi-List component to invoke it 
+<list ...preFetch="interceptor(filter)"...>
+   <!--Other elements and stuff-->
+</list>
+
+
+#### Changing the outcome
 Details here
 
 ### Changing maximum items per page
 Details here
 
 ## Manipulating the List from its methods
-
-#### Refreshing the current page
 ```javascript
+//Refreshing the current page
 $scope.listName.refresh();
-```
-#### Going to specific page
-```javascript
+
+//Going to specific page
 $scope.listName.goToPage(number);
-```
-#### Go to the last page
-```javascript
+
+//Go to the last page
 $scope.listName.goToLastPage();
-```
-#### Go to the first page
-```javascript
+
+//Go to the first page
 $scope.listName.gotToFirstPage();
-```
-#### Go to the next page
-```javascript
+
+//Go to the next page
 $scope.listName.goToNextPage();
-```
-#### Go to the previous page
-```javascript
+
+//Go to the previous page
 $scope.listName.goToPreviousPage();
 ```
 
