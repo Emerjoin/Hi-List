@@ -95,11 +95,13 @@ public class SomeFrontier{
 #### Inside the list
 ```html
    <list ...>
-      ...
+   
+     <!--Your repeatable element and other stuff might be placed here-->
       
       <input type="text" ng-model="filter.text"/>
       
-      ...
+      <!--Other elements might also be placed here-->
+        
    </list>
 ```
 
@@ -120,13 +122,13 @@ You can have a DOM element that is displayed when the delay is detected. Check t
 ```html
 <list ...>
 
-   <!--Your repeatable element and other stuff come here-->
+   <!--Your repeatable element and other stuff might be placed here-->
 
    <div ng-show="$delaying">
       <p>Please wait...</p>
    </div>
    
-   <!--Other elements may be placed here-->
+   <!--Other elements might also be placed here-->
    
 </list>
 ```
@@ -135,7 +137,7 @@ You can also define the delay detection time in milliseconds. All you have to do
 ```html
 <list ...delay="1000" ...>
 
-   <!--Your repeatable element and other stuff come here-->
+   <!--Your repeatable element and other stuff might be placed here-->
    
 </list>
 ```
@@ -146,13 +148,13 @@ You can also have a DOM element that is displayed is such situations. Check the 
 ```html
 <list ...>
 
-   <!--Your repeatable element and other stuff come here-->
+   <!--Your repeatable element and other stuff might be placed here-->
 
    <div ng-show="$empty">
       <p>There is no match on the database</p>
    </div>
    
-   <!--Other elements may be placed here-->
+   <!--Other elements might also be placed here-->
    
 </list>
 ```
@@ -184,7 +186,9 @@ The first approach is discussed on the extensions section. Lets see how we can c
 ##### Letting the Hi-List component know about the function
 ```html
    <list ...preFetch="interceptor(filter)"...>
-      <!--Other elements and stuff-->
+   
+      <!--Your repeatable element and other stuff might be placed here-->
+      
    </list>
 ```
 
@@ -217,7 +221,9 @@ There are also two ways this can be achieved. The first one again is using an ex
 ```html
 
    <list ...postFetch="transformer(result)"...>
-      <!--Other elements and stuff-->
+   
+      <!--Your repeatable element and other stuff might be placed here-->
+      
    </list>
 
 ```
@@ -233,7 +239,9 @@ There two ways this can be done: from the markup and from javascript code.
 
    <!--Setting 78 as the maximum items per page value-->
    <list ...per-page="78"...>
-      <!--Other elements and stuff-->
+   
+      <!--Your repeatable element and other stuff might be placed here-->
+      
    </list>
 
 ```
