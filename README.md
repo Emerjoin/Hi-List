@@ -1,11 +1,12 @@
-# Hi-List
+# Hi-List - An awesome data listing component from your Hi-Apps. 
 An extensible Hi-Framework UI component for data listing - easy pagination, filtering and ordering
 
-## Why use Hi-List?
-* Extensible
-* Configurable
-* Uses bootstrap components
-* Add and use
+## This component:
+* is extensible
+* is configurable
+* uses bootstrap components
+* is ours (including you)
+* is awesome!
 
 
 # Getting the Hi-List component
@@ -162,7 +163,7 @@ The first approach is discussed on the extensions section. Lets see how we can c
    </list>
 ```
 
-*MAKE SURE THE PARAMETER YOU PASS TO YOUR FUNCTION IS ALWAYS "filter".*
+**MAKE SURE THE PARAMETER YOU PASS TO YOUR FUNCTION IS ALWAYS "filter".**
 
 #### Changing the outcome
 There are also two ways this can be achieved. The first one again is using an extension and the second one is using a function on your view's scope. Let's see how do achieve this from a view's scope function.
@@ -197,7 +198,7 @@ There are also two ways this can be achieved. The first one again is using an ex
 
 ```
 
-*MAKE SURE THE PARAMETER YOU PASS TO YOUR FUNCTION IS ALWAYS "result".*
+**MAKE SURE THE PARAMETER YOU PASS TO YOUR FUNCTION IS ALWAYS "result".**<br>
 Check the extensions sections to see how to achieve the same goal from an extension.
 
 ### Changing maximum items per page
