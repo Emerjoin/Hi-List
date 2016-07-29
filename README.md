@@ -114,7 +114,7 @@ public class SomeFrontier{
    ...
 ```
 
-A change on the **filter.text** object will result in a refresh.
+A change on the **filter.text** value will result in a refresh.
 
 ### Server is taking too long
 Hi-List will set the variable *$delaying* to *true* once it detects the server delay. 
@@ -161,8 +161,8 @@ You can also have a DOM element that is displayed is such situations. Check the 
 When the server returns an empty array of rows, the pagination is not displayed.
 
 ### Intercepting the fetch operation from a view
-*What is the fetch operation?* Is when the Hi-List component attempts to fetch data from Server.
-*Why would you want to intercept such operation?* To change the input or the outcome. 
+**What is the fetch operation?** Is when the Hi-List component attempts to fetch data from Server.<br>
+**Why would you want to intercept such operation?** To change the input or the outcome. 
 Changing the input means: add filtering properties. Changing the outcome means: changing the rows composition or even adding rows.
 
 #### Changing the input
