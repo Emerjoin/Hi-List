@@ -154,11 +154,13 @@ The first approach is discussed on the extensions section. Lets see how we can c
    };
 
 ...
+```
 ##### Tell the Hi-List component to invoke it 
+```html
 <list ...preFetch="interceptor(filter)"...>
    <!--Other elements and stuff-->
 </list>
-
+```
 
 #### Changing the outcome
 Details here
