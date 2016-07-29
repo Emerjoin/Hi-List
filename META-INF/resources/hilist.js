@@ -250,14 +250,14 @@ hiList.html.delaying =
 hiList.utils = {};
 hiList.utils.getFrontierAction = function(url){
 
-    var curveIndex = url.indexOf('(');
     var dotIndex = url.indexOf('.');
 
-    if(curveIndex==-1||dotIndex==-1)
+    if(dotIndex==-1)
         return undefined;
 
     var controller = url.substr(0,dotIndex);
-    var action = url.substr(dotIndex+1,url.substr(dotIndex).length-3);
+    //var action = url.substr(dotIndex+1,url.substr(dotIndex).length-3);
+    var action = url.substr(dotIndex+1,url.length);
 
 
     try {
