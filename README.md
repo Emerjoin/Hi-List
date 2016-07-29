@@ -172,21 +172,20 @@ There are also two ways this can be achieved. The first one again is using an ex
 ```javascript
 ...
 
-   //This will add a new property to every matched row
+   //This will add a new property (checked) to every matched row
    $scope.transformer = function(result){
       
          result.data.forEach(function(row){
             
             row.checked = true;
             
-         }
+         });
    
    }
 
 ....
 
 ```
-
 
 ##### Leting the Hi-List component know about the function
 
