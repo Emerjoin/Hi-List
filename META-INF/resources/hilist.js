@@ -691,17 +691,18 @@ hiList.directive = function($compile,$parse){
             //int pageNumber, int itemsPerPage, Map filter, Map ordering
 
             var itemsPerPage = $scope.show.maxItems;
-            //var filter = $scope.filter;
-            var filter = {empty:true};
+
+
+            //var filter = {empty:true};
             var ordering = $scope.ordering;
 
 
             //Tell the status handler and all extensions that the filtering is about to start
             if($scope.$handlers.preFetch)
                 $scope.$handlers.preFetch($scope,{filter:$scope.filter});
-            $scope.callExtensions("preFetch",[$scope,filter]);
+            $scope.callExtensions("preFetch",[$scope,$scope.filter]);
 
-            $scope.$ds.call({},page,itemsPerPage,filter,ordering)
+            $scope.$ds.call({},page,itemsPerPage,$scope.filter,ordering)
 
                 .try(function(result){
 
