@@ -880,8 +880,17 @@ hiList.directive = function($compile,$parse){
             var itemsPerPage = parseInt(attributes.perPage);
             if(!isNaN(itemsPerPage)){
 
+                if(itemsPerPage<=1){
+
+                    throw new Error("Invalid max items per page. Should be higher than 1");
+
+                }
+
                 if($scope.maxItemsOptions.indexOf(itemsPerPage)==-1) {
-                    throw new Error("Invalid max items per page : " + itemsPerPage + ". Should be one of the following : "+$scope.maxItemsOptions.toString());
+
+                    //Add the option at the beginning of the list
+                    $scope.maxItemsOptions.unshift(itemsPerPage);
+
                 }
 
                 $scope.show.maxItems = itemsPerPage;
