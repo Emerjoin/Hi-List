@@ -24,7 +24,7 @@ An extensible Hi-Framework UI component for data listing - easy pagination, filt
 <dependency>
    <groupId>mz.talkcode.components</groupId>
    <artifactId>HiList</artifactId>
-   <version>1.0-beta-SNAPSHOT</version>
+   <version>1.2-beta-SNAPSHOT</version>
 </dependency>
 ```
 
