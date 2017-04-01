@@ -687,15 +687,9 @@ hiList.directive = function($compile,$parse){
             if(typeof p!="undefined")
                 page = p;
 
-
-            //int pageNumber, int itemsPerPage, Map filter, Map ordering
-
             var itemsPerPage = $scope.show.maxItems;
 
-
-            //var filter = {empty:true};
             var ordering = $scope.ordering;
-
 
             //Tell the status handler and all extensions that the filtering is about to start
             if($scope.$handlers.preFetch)
@@ -706,12 +700,13 @@ hiList.directive = function($compile,$parse){
 
                 .try(function(result){
 
-
                     $scope.$processResult(result);
                     $scope.activePage = page;
 
-
                 }).catch(function(err){
+
+                if($scope.$handlers.onFail)
+                    $scope.$handlers.onFail(err);
 
                 //Tell the extensions that the fetch failed
                 $scope.callExtensions("fetchFail",[$scope]);
@@ -852,10 +847,6 @@ hiList.directive = function($compile,$parse){
 
         $scope.$bootExtensions();
 
-        //$scope.rows = [{id:1,name:"Mario Junior"}];
-
-
-
         //Name
         if(!attributes.hasOwnProperty("name"))
             throw new Error("The list element should have a <name> attribute");
@@ -966,6 +957,14 @@ hiList.directive = function($compile,$parse){
 
         }
 
+        if(attributes.hasOwnProperty("onFail")){
+
+            var failName = attributes["onFail"];
+            var parsed = $parse(failName);
+            $scope.$handlers.onFail = parsed;
+
+        }
+
         if(attributes.hasOwnProperty("postfetch")){
 
             var pfetchFname = attributes["postfetch"];
@@ -979,23 +978,16 @@ hiList.directive = function($compile,$parse){
         $scope.callExtensions("transformRepeatable",[$scope,attributes,transformable]);
         jqRepeatable = transformable.repeatable;
 
-
         //Add the ng-repeat
         jqRepeatable.attr("ng-repeat",eachItem+" in rows");
 
-
-        //TODO: Add the header
         var header = $("<header>").addClass("row hilist-header").html(hiList.html.header);
         $(element).prepend(header);
 
-
-        //TODO: Add the footer
         var footer = $("<footer>").addClass("row hilist-footer").html(hiList.html.footer);
         $(element).append(footer);
 
-
         var html = $(element).html();
-
 
         //Call plugins to transform the markup
         transformable = {html:html};
