@@ -10,6 +10,18 @@ import java.util.Map;
 @WebComponent
 public class HiList {
 
+    public static int pages(int matches, int perPage){
+
+        int pages = matches / perPage;
+        double mod =  matches % perPage;
+        if(mod>0)
+             ++pages;
+
+        return pages;
+
+    }
+
+
     public static Map listEncode(Collection data, int matches, int page, int pages) throws IllegalArgumentException{
 
         if(data==null)
