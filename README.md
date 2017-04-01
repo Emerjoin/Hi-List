@@ -235,6 +235,29 @@ There are also two ways this can be achieved. The first one again is using an ex
 **MAKE SURE THE PARAMETER YOU PASS TO YOUR FUNCTION IS ALWAYS "result".**<br>
 Check the extensions sections to see how to achieve the same goal from an extension.
 
+#### Catching failures
+Hi-List allows you to catch failures by setting the __onFail__ callback:
+
+```html
+    
+    <list... onFail="failure(err)">
+
+```
+
+
+```js
+    
+    $scope.failure = function(err){
+        
+        //Do some magick here
+            
+    }
+    
+```
+
+**MAKE SURE YOUR FUNCTION ALWAYS GETS the "err" parameter so that you can have access to the error object.**<br>
+
+
 ### Changing maximum items per page
 There two ways this can be done: from the markup and from javascript code.
 
