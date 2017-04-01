@@ -705,15 +705,15 @@ hiList.directive = function($compile,$parse){
 
                 }).catch(function(err){
 
-                if($scope.$handlers.onFail)
-                    $scope.$handlers.onFail(err);
+                    if($scope.$handlers.onFail)
+                        $scope.$handlers.onFail($scope, {err: err});
 
-                //Tell the extensions that the fetch failed
-                $scope.callExtensions("fetchFail",[$scope]);
-                $scope.pagesVisible = [];//No visible pages
-                $scope.$failed = true;
-                $scope.rows=[];
-                console.error("Datasource frontier request failed for " + $scope.$attributes.name + ".");
+                    //Tell the extensions that the fetch failed
+                    $scope.callExtensions("fetchFail",[$scope]);
+                    $scope.pagesVisible = [];//No visible pages
+                    $scope.$failed = true;
+                    $scope.rows=[];
+                    console.error("Datasource frontier request failed for " + $scope.$attributes.name + ".");
 
 
             }).finally(function(){
@@ -957,9 +957,9 @@ hiList.directive = function($compile,$parse){
 
         }
 
-        if(attributes.hasOwnProperty("onFail")){
+        if(attributes.hasOwnProperty("onfail")){
 
-            var failName = attributes["onFail"];
+            var failName = attributes["onfail"];
             var parsed = $parse(failName);
             $scope.$handlers.onFail = parsed;
 
