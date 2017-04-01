@@ -222,7 +222,7 @@ hiList.html = {};
 hiList.html.header ='<div></div>';
 
 hiList.html.footer =
-    '<nav class="col-md-12 col-lg-12 col-sm-12 text-center" ng-show="!$empty||$failed">'+
+    '<nav class="col-md-12 col-lg-12 col-sm-12 text-center" ng-show="!$empty&&!$failed">'+
     '<ul class="pagination">'+
     '<li>'+
     '<a  ng-click="goToPreviousPage()" href="#" aria-label="Previous">'+
