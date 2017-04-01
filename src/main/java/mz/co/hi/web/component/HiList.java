@@ -10,6 +10,14 @@ import java.util.Map;
 @WebComponent
 public class HiList {
 
+
+    /**
+     * Calculates the number of pages to be presented by HiList component.
+     * @since 1.4
+     * @param matches - total matched records
+     * @param perPage - items per page
+     * @return the total number of pages to navigate through the records.
+     */
     public static int pages(int matches, int perPage){
 
         int pages = matches / perPage;
