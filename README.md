@@ -13,10 +13,10 @@ An extensible Hi-Framework UI component for data listing - easy pagination, filt
 ## Maven
 ### The repository
 ```xml
-<repository>
-   <id>talk-code</id>
-   <name>maven-repo</name>
-   <url>https://github.com/talk-code/maven-repo/raw/master</url>
+ <repository>
+    <id>Emerjoin</id>
+    <name>maven-repo</name>
+    <url>https://github.com/Emerjoin/maven-repo/raw/master</url>
 </repository>
 ```
 ### The dependency
@@ -24,11 +24,7 @@ An extensible Hi-Framework UI component for data listing - easy pagination, filt
 <dependency>
    <groupId>mz.talkcode.components</groupId>
    <artifactId>HiList</artifactId>
-<<<<<<< HEAD
-   <version>1.0-beta-SNAPSHOT</version>
-=======
-   <version>1.2-beta-SNAPSHOT</version>
->>>>>>> 560f67f6758b0262e7959717188df6cfaa032c1b
+   <version>1.4-beta-SNAPSHOT</version>
 </dependency>
 ```
 
