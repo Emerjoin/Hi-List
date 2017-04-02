@@ -22,9 +22,9 @@ An extensible Hi-Framework UI component for data listing - easy pagination, filt
 ### The dependency
 ```xml
 <dependency>
-   <groupId>org.emerjoin</groupId>
+   <groupId>org.emerjoin.webcomponents</groupId>
    <artifactId>HiList</artifactId>
-   <version>1.4-beta-SNAPSHOT</version>
+   <version>1.4.0-beta-SNAPSHOT</version>
 </dependency>
 ```
 
