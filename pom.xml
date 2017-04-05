@@ -6,7 +6,7 @@
 
     <groupId>org.emerjoin.webcomponents</groupId>
     <artifactId>HiList</artifactId>
-    <version>1.4.0-beta-SNAPSHOT</version>
+    <version>1.4.1-beta-SNAPSHOT</version>
 
     <dependencies>
 
