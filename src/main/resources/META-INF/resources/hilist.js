@@ -1017,10 +1017,11 @@ hiList.directive = function($compile,$parse){
 
     };
 
+    directive["$inject"] = ["$scope","element","attributes"];
     return directive;
 
 
 };
 
-
+hiList.directive["$inject"] = ["$compile","$parse"];
 Hi.$ui.js.component("list",hiList.directive);
