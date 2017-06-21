@@ -28,9 +28,6 @@ An extensible Hi-Framework UI component for data listing - easy pagination, filt
 </dependency>
 ```
 
-## Jar
-SOON
-
 # Using Hi-List
 ## A simple list
 ```html
