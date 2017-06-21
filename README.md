@@ -75,13 +75,10 @@ public class SomeFrontier{
 
     public Map methodName(int pageNumber, int itemsPerPage, Map filter, Map ordering){
           
-          int totalMatchedPages;
-          Object[] rows;
-          int totalMachedRows;
+          Object[] pageRows = // fetch current page's rows from database
+          int totalMachedRows = //count matched rows in database
           
-          //Consult your database here and set the variables above
-          
-          return HiList.listEncode(rows, totalMachedRows, pageNumber, totalMatchedPages)
+          return HiList.listEncode(pageRows, totalMachedRows, pageNumber, itemsPerPage)
     
     }
 
