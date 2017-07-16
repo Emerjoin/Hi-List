@@ -225,13 +225,13 @@ hiList.html.footer =
     '<nav class="col-md-12 col-lg-12 col-sm-12 text-center" ng-show="!$empty&&!$failed">'+
     '<ul class="pagination">'+
     '<li>'+
-    '<a  ng-click="goToPreviousPage()" href="#" aria-label="Previous">'+
+    '<a  ng-click="goToPreviousPage()" href="javascript:void(0)" aria-label="Previous">'+
     '<span aria-hidden="true"><b translate>Previous</b></span>'+
     '</a>'+
     '</li>'+
-    '<li ng-class=\'{"active":activePage==page}\' ng-click="activatePage(page)" ng-repeat="page in pagesVisible"><a href="#">{{page}}</a></li>'+
+    '<li ng-class=\'{"active":activePage==page}\' ng-click="activatePage(page)" ng-repeat="page in pagesVisible"><a href="javascript:void(0)">{{page}}</a></li>'+
     '<li>'+
-    '<a ng-click="goToNextPage()" href="#" aria-label="Next">'+
+    '<a ng-click="goToNextPage()" href="javascript:void(0)" aria-label="Next">'+
     '<span aria-hidden="true"><b translate>Next</b></span>'+
     '</a>'+
     '</li>'+
@@ -705,6 +705,9 @@ hiList.directive = function($compile,$parse){
 
                 }).catch(function(err){
 
+                    if(err==452)//Call interrupted
+                        return;
+
                     if($scope.$handlers.onFail)
                         $scope.$handlers.onFail($scope, {err: err});
 
@@ -713,7 +716,8 @@ hiList.directive = function($compile,$parse){
                     $scope.pagesVisible = [];//No visible pages
                     $scope.$failed = true;
                     $scope.rows=[];
-                    console.error("Datasource frontier request failed for " + $scope.$attributes.name + ".");
+                    console.error("Datasource frontier request failed for [" + $scope.$attributes.name + "] List.");
+                    console.error(err);
 
 
             }).finally(function(){
@@ -724,12 +728,11 @@ hiList.directive = function($compile,$parse){
 
                 if($scope.$filterInProgress){
 
-                    //TODO: Tell the status handler that the filtering is complete
                     $scope.$filterInProgress = false
 
                 }
 
-                $scope.$apply();
+                $scope.$applyAsync();
 
 
             });
