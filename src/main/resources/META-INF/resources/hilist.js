@@ -742,10 +742,12 @@ hiList.directive = function($compile,$parse){
 
 
         //The public method
-        $scope.refresh = function(){
 
-            $scope.activatePage($scope.activePage);
+        $scope.refresh = function(samePage){
+            if(samePage)
+                return $scope.activatePage($scope.activePage);
 
+            return $scope.activatePage(1);
 
         };
 
