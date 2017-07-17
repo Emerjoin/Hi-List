@@ -368,26 +368,10 @@ hiList.directive = function($compile,$parse){
 
         };
 
-        //Watch filter text
-        $scope.$watch("filter.text",function(newValue,oldValue){
-
-            $scope.$doFilter(1);
-
-
-        });
-
-
-        //Watch items per page
-        $scope.$watch("show.maxItems",function(newValue,oldValue){
-
-            $scope.$doFilter(1);
-
-        });
 
         $scope.$hide = {};
         $scope.$show = {};
         $scope.show.maxItemsOptions = true;
-
 
         $scope.$elements = {};
 
@@ -640,16 +624,9 @@ hiList.directive = function($compile,$parse){
             $scope.totalPages = result.totalPagesMatch;
             $scope.totalRowsMatch = result.totalRowsMatch;
 
-            //here
             var pNumber = $scope.activePage;
-
-            if(pNumber==1){
-
-                $scope.$pages.createPagesList(result.totalPagesMatch);
-                $scope.activePage = 1;
-
-            }
-
+            $scope.$pages.createPagesList(result.totalPagesMatch);
+            $scope.activePage = pNumber;
 
         };
 
@@ -702,6 +679,8 @@ hiList.directive = function($compile,$parse){
 
                     $scope.$processResult(result);
                     $scope.activePage = page;
+                    if($scope.ready)
+                        $scope.publishStatus();
 
                 }).catch(function(err){
 
@@ -721,6 +700,11 @@ hiList.directive = function($compile,$parse){
 
 
             }).finally(function(){
+
+                if(!$scope.ready){
+                    $scope.$readinessCallback.apply();
+                    $scope.ready = true;
+                }
 
                 $scope.callExtensions("fetchFinished",[$scope]);
                 $scope.$delaying = false;
@@ -951,14 +935,61 @@ hiList.directive = function($compile,$parse){
         }
 
 
-        $scope.filter = {text:""};
+        $scope.publishStatus = function(){
+
+            if(typeof $scope.$listWatcher == "undefined")
+                return;
+
+            var listStatus = {};
+            listStatus.page = $scope.activePage;
+            listStatus.filter = $scope.filter;
+            listStatus.pageSize = $scope.show.maxItems;
+            $scope.$listWatcher($scope,{status:listStatus});
+
+        };
+
+
+        $scope.filter = {};
         $scope.$handlers = {};
+        $scope.$listWatcher = undefined;
+        $scope.$listInitializer = undefined;
+        $scope.$readinessCallback = undefined;
+
+        $scope.$initialize = function(){
+
+            if(typeof $scope.$listInitializer=="undefined"){
+                $scope.$doFilter(1);
+                return;
+            }
+
+            var init = {page:1,pageSize:$scope.show.maxItems,filter:$scope.filter};
+            init.ready = function(callback){
+                if(typeof callback!="function")
+                    throw new Error("ready callback must be a function");
+                $scope.$readinessCallback = callback;
+            };
+
+            $scope.$listInitializer($scope,{context:init});
+            $scope.show.maxItems = init.pageSize;
+            $scope.filter = init.filter;
+            $scope.$doFilter(init.page);
+
+        };
+
+        if(attributes.hasOwnProperty("watcher")){
+            var watcherName = attributes["watcher"];
+            $scope.$listWatcher = $parse(watcherName);
+        }
+
+        if(attributes.hasOwnProperty("initializer")){
+            var initializerName = attributes["initializer"];
+            $scope.$listInitializer = $parse(initializerName);
+        }
 
         if(attributes.hasOwnProperty("prefetch")){
 
-            var pfetchFname = attributes["prefetch"];
-            var parsed = $parse(pfetchFname);
-            $scope.$handlers.preFetch = parsed;
+            var prefetchName = attributes["prefetch"];
+            $scope.$handlers.preFetch = $parse(prefetchName);
 
         }
 
@@ -1018,6 +1049,7 @@ hiList.directive = function($compile,$parse){
 
 
         compile($scope);
+        $scope.$initialize();
 
 
     };
