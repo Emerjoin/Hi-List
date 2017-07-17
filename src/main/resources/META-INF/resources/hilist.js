@@ -210,19 +210,10 @@ hiList.extend(function(extension){
 //---Extension sample ends here---*/
 
 hiList.html = {};
-/*
- hiList.html.header =
- '<div class="form-group col-md-4 col-lg-4 col-sm-4 col-xs-12">'+
- '<input type="text" ng-model="filter.text" class="form-control" placeholder="Pesquisar">'+
- '</div>'+
- '<div class="col-md-8 col-lg-8 col-sm-8 hidden-xs">'+
- '<select ng-show="show.maxItemsOptions" style="max-width: 60px;" class="form-control pull-right" ng-model="show.maxItems" ng-options="x for x in maxItemsOptions"></select>'+
- '</div>';*/
-
 hiList.html.header ='<div></div>';
 
 hiList.html.footer =
-    '<nav class="col-md-12 col-lg-12 col-sm-12 text-center" ng-show="!$empty&&!$failed">'+
+    '<nav class="col-md-12 col-lg-12 col-sm-12 text-center" ng-show="!$empty&&!$failed&&pagesVisible.length>0">'+
     '<ul class="pagination">'+
     '<li>'+
     '<a  ng-click="goToPreviousPage()" href="javascript:void(0)" aria-label="Previous">'+
@@ -701,11 +692,6 @@ hiList.directive = function($compile,$parse){
 
             }).finally(function(){
 
-                if(!$scope.ready){
-                    if(typeof $scope.$readinessCallback !="undefined")
-                        $scope.$readinessCallback.apply();
-                    $scope.ready = true;
-                }
 
                 $scope.callExtensions("fetchFinished",[$scope]);
                 $scope.$delaying = false;
@@ -717,7 +703,19 @@ hiList.directive = function($compile,$parse){
 
                 }
 
-                $scope.$applyAsync();
+                $scope.$applyAsync(function(){
+
+                    setTimeout(function(){
+
+                        if(!$scope.ready){
+                            if(typeof $scope.$readinessCallback !="undefined")
+                                $scope.$readinessCallback.apply();
+                            $scope.ready = true;
+                        }
+
+                    },50);
+
+                });
 
 
             });
@@ -1040,7 +1038,6 @@ hiList.directive = function($compile,$parse){
 
         });
 
-        element.html(angularElement);
 
 
         $scope.callExtensions("apiSetup",[$scope,attributes]);
@@ -1048,8 +1045,8 @@ hiList.directive = function($compile,$parse){
         //Add the scope object to the its parent
         scopeParent[listName] = $scope;
 
-
         compile($scope);
+        element.html(angularElement);
         $scope.$initialize();
 
 
