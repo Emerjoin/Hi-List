@@ -702,7 +702,8 @@ hiList.directive = function($compile,$parse){
             }).finally(function(){
 
                 if(!$scope.ready){
-                    $scope.$readinessCallback.apply();
+                    if(typeof $scope.$readinessCallback !="undefined")
+                        $scope.$readinessCallback.apply();
                     $scope.ready = true;
                 }
 
