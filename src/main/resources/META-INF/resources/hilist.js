@@ -283,7 +283,7 @@ hiList.directive = function($compile,$parse){
     directive.scope = true;
     directive.link = function($scope,element,attributes) {
 
-        $scope.autoload = true;
+        $scope.$autoload = true;
         $scope.maxItemsOptions=[25,50,150,200];
         $scope.show ={maxItems:25};
         $scope.activePage = 1;
@@ -968,10 +968,7 @@ hiList.directive = function($compile,$parse){
         if(attributes.hasOwnProperty("autoload")){
             var autoload = JSON.parse(attributes["autoload"]);
             $scope.$autoload = autoload;
-            console.log("autoload = ")
         }
-
-        console.log("autoload = "+$scope.$autoload)
 
         //Tell extensions to transform the repeatable item
         var transformable = {repeatable: jqRepeatable};
@@ -1003,9 +1000,7 @@ hiList.directive = function($compile,$parse){
         $scope.callExtensions("transformHtml",[$scope,attributes,transformable]);
         html = transformable.html;
 
-
         var angularElement = angular.element(html);
-
         var compile = $compile(angularElement,function(){
 
         });
@@ -1022,8 +1017,8 @@ hiList.directive = function($compile,$parse){
         //Add the scope object to the its parent
         scopeParent[listName] = $scope;
         compile($scope);
-        if($scope.autoload){
-            console.log("autoloading");
+        if($scope.$autoload){
+            console.log("auto-loading List: "+listName);
             $scope.load();
         }
     };
