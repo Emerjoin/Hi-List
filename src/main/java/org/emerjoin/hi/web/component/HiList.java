@@ -41,17 +41,14 @@ public class HiList {
     }
 
     public static Map listEncode(Object[] data,int matches, int page, int itemsPerPage) throws IllegalArgumentException{
-
         if(data==null||matches<0||itemsPerPage<0||page<0)
             throw new IllegalArgumentException();
-
         Map result = new HashMap();
         result.put("data",data);
         result.put("totalRowsMatch",matches);
         result.put("pageNumber",page);
         result.put("totalPagesMatch",pages(matches,itemsPerPage));
         return result;
-
     }
 
 }

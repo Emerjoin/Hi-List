@@ -124,9 +124,7 @@ hiList.getExtension = function(name){
 };
 
 
-
 //---Extension sample begins here---
-
 hiList.extend(function(extension){
 
     return {
@@ -240,23 +238,17 @@ hiList.html.delaying =
 
 hiList.utils = {};
 hiList.utils.getFrontierAction = function(url){
-
     var dotIndex = url.indexOf('.');
-
     if(dotIndex==-1)
         return undefined;
-
     var controller = url.substr(0,dotIndex);
-    //var action = url.substr(dotIndex+1,url.substr(dotIndex).length-3);
     var action = url.substr(dotIndex+1,url.length);
-
 
     try {
 
         var functionResolved = eval(controller + "." + action);
         if(typeof functionResolved !="function")
             return false;
-
         return functionResolved;
 
     }catch(err){
@@ -291,6 +283,7 @@ hiList.directive = function($compile,$parse){
     directive.scope = true;
     directive.link = function($scope,element,attributes) {
 
+        $scope.autoload = true;
         $scope.maxItemsOptions=[25,50,150,200];
         $scope.show ={maxItems:25};
         $scope.activePage = 1;
@@ -304,46 +297,28 @@ hiList.directive = function($compile,$parse){
 
         $scope.activatePage = function(page){
 
-
             $scope.activePage = page;
-
             //here
             var pNumber = $scope.activePage;
-
             if(pNumber>1){
-
-
                 var pageIndex = $scope.pagesVisible.indexOf(pNumber);
-
                 if(pageIndex==-1){
-
                     //Page is not visible
                     $scope.$pages.notVisible(pNumber);
-
-
                 }else {
-
                     //Page is visible
-
                     //Apply the pages shift effect
                     var lastVisiblePageIndex = $scope.pagesVisible.indexOf($scope.pagesVisible[$scope.pagesVisible.length - 1]);
                     var lastVisiblePageGlobalIndex = $scope.pages.indexOf($scope.pagesVisible[$scope.pagesVisible.length - 1]);
                     var firstVisiblePageGlobalIndex = $scope.pages.indexOf($scope.pagesVisible[0]);
                     var lastGlobalPageIndex = $scope.pages.length - 1;
-
                     var middleIndex = lastVisiblePageIndex / 2;
-
-
                     if (pageIndex > middleIndex) {
-
                         //Scroll left
                         $scope.$pages.left(pageIndex, lastVisiblePageIndex, lastGlobalPageIndex, lastVisiblePageGlobalIndex);
-
                     } else if (pageIndex < middleIndex) {
-
                         //Scroll right
                         $scope.$pages.right(pageIndex, lastVisiblePageIndex, firstVisiblePageGlobalIndex);
-
                     } else {
 
                         //Dont move
@@ -353,7 +328,6 @@ hiList.directive = function($compile,$parse){
                 }
 
             }//-end here
-
 
             $scope.$doFilter(page);
 
@@ -374,47 +348,29 @@ hiList.directive = function($compile,$parse){
 
         $scope.$pages = {};
         $scope.callExtensions = function(method,params){
-
             for(var extensionName in $scope.$extensions){
-
                 var extension = $scope.$extensions[extensionName];
-
                 if(typeof extension!="object")
                     continue;
-
                 if(extension.hasOwnProperty(method)){
-
                     extension[method].apply(extension,params)
-
                 }
-
-
             }
-
         };
 
         $scope.$pages.createPagesList = function(totalPages){
-
             //Generate the pages list
-
             $scope.pages = hiList.utils.generatePagesSequence(totalPages);
-
             var pageCount = 0;
             var visiblePages = [];
             $scope.pages.forEach(function(item,index){
-
                 if(pageCount==$scope.maxVisiblePages)
                     return;
-
                 visiblePages.push(item);
                 pageCount++;
-
             });
-
             $scope.pagesVisible = visiblePages;
             $scope.activePage = 1;
-
-
         };
         $scope.$pages.right = function(pageIndex, lastVisiblePageIndex, firstVisiblePageGlobalIndex){
 
@@ -853,6 +809,7 @@ hiList.directive = function($compile,$parse){
             throw new Error("The list element should have a <src> attribute that specifies the data source.");
 
 
+
         //Items per page
         if(attributes.hasOwnProperty("perPage")){
 
@@ -980,32 +937,37 @@ hiList.directive = function($compile,$parse){
             $scope.$listWatcher = $parse(watcherName);
         }
 
+
+        if(attributes.hasOwnProperty("transformer")){
+            var transformerName = attributes["transformer"];
+            $scope.$listTransformer = $parse(transformerName);
+        }
+
         if(attributes.hasOwnProperty("initializer")){
             var initializerName = attributes["initializer"];
             $scope.$listInitializer = $parse(initializerName);
         }
 
         if(attributes.hasOwnProperty("prefetch")){
-
             var prefetchName = attributes["prefetch"];
             $scope.$handlers.preFetch = $parse(prefetchName);
-
         }
 
         if(attributes.hasOwnProperty("onfail")){
-
             var failName = attributes["onfail"];
             var parsed = $parse(failName);
             $scope.$handlers.onFail = parsed;
-
         }
 
         if(attributes.hasOwnProperty("postfetch")){
-
             var pfetchFname = attributes["postfetch"];
             var parsed = $parse(pfetchFname);
             $scope.$handlers.postFetch = parsed;
+        }
 
+        if(attributes.hasOwnProperty("autoload")){
+            var autoload = parseBoolean(attributes["autoload"]);
+            $scope.$autoload = autoload;
         }
 
         //Tell extensions to transform the repeatable item
@@ -1019,10 +981,19 @@ hiList.directive = function($compile,$parse){
         var header = $("<header>").addClass("row hilist-header").html(hiList.html.header);
         $(element).prepend(header);
 
-        var footer = $("<footer>").addClass("row hilist-footer").html(hiList.html.footer);
-        $(element).append(footer);
+        if(!attributes.hasOwnProperty("noFooter")){
+           var footer = $("<footer>").addClass("row hilist-footer").html(hiList.html.footer);
+           $(element).append(footer);
+        }
 
         var html = $(element).html();
+
+        if(typeof $scope.$listTransformer !="undefined"){
+            var arg = {element:html};
+            html = $scope.$listTransformer($scope,arg);
+        }
+
+
 
         //Call plugins to transform the markup
         transformable = {html:html};
@@ -1034,27 +1005,19 @@ hiList.directive = function($compile,$parse){
 
         var compile = $compile(angularElement,function(){
 
-
-
         });
 
-
-
         $scope.callExtensions("apiSetup",[$scope,attributes]);
-
         //Add the scope object to the its parent
         scopeParent[listName] = $scope;
-
         compile($scope);
         element.html(angularElement);
-        $scope.$initialize();
-
-
+        if($scope.autoload)
+            $scope.$initialize();
     };
 
     directive["$inject"] = ["$scope","element","attributes"];
     return directive;
-
 
 };
 
