@@ -911,10 +911,6 @@ hiList.directive = function($compile,$parse){
         $scope.$listInitializer = undefined;
         $scope.$readinessCallback = undefined;
 
-        $scope.load = function(){
-            $scope.$initialize();
-        }
-
         $scope.$initialize = function(){
 
             if(typeof $scope.$listInitializer=="undefined"){
@@ -972,7 +968,10 @@ hiList.directive = function($compile,$parse){
         if(attributes.hasOwnProperty("autoload")){
             var autoload = JSON.parse(attributes["autoload"]);
             $scope.$autoload = autoload;
+            console.log("autoload = ")
         }
+
+        console.log("autoload = "+$scope.$autoload)
 
         //Tell extensions to transform the repeatable item
         var transformable = {repeatable: jqRepeatable};
@@ -1011,13 +1010,18 @@ hiList.directive = function($compile,$parse){
 
         });
 
+
+        $scope.load = function(){
+            element.html(angularElement);
+            $scope.$initialize();
+        }
+
+
         $scope.callExtensions("apiSetup",[$scope,attributes]);
+
         //Add the scope object to the its parent
         scopeParent[listName] = $scope;
         compile($scope);
-        element.html(angularElement);
-        if($scope.autoload)
-            $scope.$initialize();
     };
 
     directive["$inject"] = ["$scope","element","attributes"];
