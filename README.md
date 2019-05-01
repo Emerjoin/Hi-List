@@ -24,7 +24,7 @@ An extensible Hi-Framework UI component for data listing - easy pagination, filt
 <dependency>
    <groupId>org.emerjoin.webcomponents</groupId>
    <artifactId>HiList</artifactId>
-   <version>2.0.0</version>
+   <version>2.1.0</version>
 </dependency>
 ```
 
@@ -40,7 +40,7 @@ An extensible Hi-Framework UI component for data listing - easy pagination, filt
 </list>
 ```
 
-### Examplaining the attributes
+### Explaining the attributes
 All the attributes present on that list element are mandatory. There shouldn't be a list without any of that attributes.
 #### name
 It defines the name of your list instance and you can use such name
@@ -293,6 +293,20 @@ $scope.listName.goToNextPage();
 
 //Go to the previous page
 $scope.listName.goToPreviousPage();
+```
+
+### Manual initialization
+
+#### Your Markup
+```html
+   <!--Configure the list to not auto-load-->
+   <list ...autoload="false"  ...>
+      <!--Your repeatable element and other stuff might be placed here-->
+   </list>
+```
+```javascript
+   //Initialize the list when you want it.
+   myList.load();
 ```
 
 # Extensions

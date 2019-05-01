@@ -911,6 +911,10 @@ hiList.directive = function($compile,$parse){
         $scope.$listInitializer = undefined;
         $scope.$readinessCallback = undefined;
 
+        $scope.load = function(){
+            $scope.$initialize();
+        }
+
         $scope.$initialize = function(){
 
             if(typeof $scope.$listInitializer=="undefined"){
