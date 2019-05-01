@@ -1018,7 +1018,6 @@ hiList.directive = function($compile,$parse){
         scopeParent[listName] = $scope;
         compile($scope);
         if($scope.$autoload){
-            console.log("auto-loading List: "+listName);
             $scope.load();
         }
     };
