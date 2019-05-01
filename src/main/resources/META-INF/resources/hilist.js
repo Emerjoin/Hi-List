@@ -970,7 +970,7 @@ hiList.directive = function($compile,$parse){
         }
 
         if(attributes.hasOwnProperty("autoload")){
-            var autoload = parseBoolean(attributes["autoload"]);
+            var autoload = JSON.parse(attributes["autoload"]);
             $scope.$autoload = autoload;
         }
 
