@@ -1022,6 +1022,10 @@ hiList.directive = function($compile,$parse){
         //Add the scope object to the its parent
         scopeParent[listName] = $scope;
         compile($scope);
+        if($scope.autoload){
+            console.log("autoloading");
+            $scope.load();
+        }
     };
 
     directive["$inject"] = ["$scope","element","attributes"];
