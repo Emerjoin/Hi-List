@@ -295,15 +295,17 @@ $scope.listName.goToNextPage();
 $scope.listName.goToPreviousPage();
 ```
 
-### Manual initialization
+## Manual initialization
 
-#### Your Markup
+### Your view markup
 ```html
    <!--Configure the list to not auto-load-->
    <list ...autoload="false"  ...>
       <!--Your repeatable element and other stuff might be placed here-->
    </list>
 ```
+
+### Your view controller
 ```javascript
    //Initialize the list when you want it.
    myList.load();
